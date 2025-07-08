@@ -1,12 +1,15 @@
 import React from 'react'
 import { booksdata } from '../Utils/HardCoded'
 import { useParams, Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 const BookInfo = () => {
+  const addedBooks=useSelector((store)=>store.book.items)
+  const allBooks=[...booksdata,...addedBooks]
     const params=useParams()
     // console.log(params)
-    const book=booksdata.filter((books)=>{
+    const book=allBooks.filter((books)=>{
      return books.id==params.id
     })
   return (
