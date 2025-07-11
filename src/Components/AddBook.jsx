@@ -74,7 +74,7 @@ const AddBook = () => {
                     <input className='border p-2 rounded-md text-center focus:ring-2 focus:ring-red-400' type="text" name="isbn" placeholder='ISBN' value={formData.isbn}
                         onChange={(e) => setFormData({ ...formData, isbn: e.target.value })} />
 
-                    <button className='bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded-md transition' type='submit' onClick={handleSubmit}>
+                    <button className='bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded-md transition hover:cursor-pointer' type='submit' onClick={handleSubmit}>
                         ➕ Submit
                     </button>
                 </form>
